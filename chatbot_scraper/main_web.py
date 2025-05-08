@@ -46,5 +46,5 @@ def extractTextFromURL(target_url):
         print(f"An unexpected Error ocurred: {e}")
 
 #URL
-target_url = "https://www.landonhotel.com"
+target_url = "https://www.terradomar.com.ar/servicios.php"
 extractTextFromURL(target_url)
