@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-def extractTextFromURL(URL):
+def extractTextFromURL(target_url):
     """
         Extracts all text within <p> tags from a website and saves it to a text file.
 
@@ -38,9 +38,10 @@ def extractTextFromURL(URL):
         else:
             print(f"Error: failed to retrieve website content. Status code: {response.status_code}")
 
+    # Catch any errors related to the HTTP request (connection issues, timeout, etc.)
     except requests.exceptions.RequestException as e:
         print(f"Request error: {e}")
-
+    # Catch any unexpected errors (e.g., issues saving the file, logic errors, etc.)
     except Exception as e:
         print(f"An unexpected Error ocurred: {e}")
 
